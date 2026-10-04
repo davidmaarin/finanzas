@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+  <title>Finanzas</title>
+  <meta name="description" content="Controla tus ingresos, gastos, presupuestos y metas de ahorro.">
+  <meta name="theme-color" content="#0b0c14">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Finanzas">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+
+  <main id="view" class="view"></main>
+
+  <nav class="tabbar" aria-label="Navegación">
+    <button class="tab" data-action="tab" data-tab="home"><span class="ti" data-icon="home"></span><span>Inicio</span></button>
+    <button class="tab" data-action="tab" data-tab="tx"><span class="ti" data-icon="list"></span><span>Movimientos</span></button>
+    <button class="fab" data-action="add" data-type="expense" aria-label="Añadir movimiento"><span class="ti" data-icon="plus"></span></button>
+    <button class="tab" data-action="tab" data-tab="budget"><span class="ti" data-icon="pie"></span><span>Presupuestos</span></button>
+    <button class="tab" data-action="tab" data-tab="goals"><span class="ti" data-icon="target"></span><span>Metas</span></button>
+  </nav>
+
+  <div id="sheet-root"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <input type="file" id="restoreFile" accept="application/json,.json" hidden>
+
+  <script src="app.js"></script>
+</body>
+</html>
